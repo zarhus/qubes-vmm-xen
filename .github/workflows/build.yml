@@ -1,0 +1,14 @@
+name: Create QubesOS RPMs
+
+on:
+  pull_request:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  vmm-xen:
+    uses: zarhus/qubes-builder-workflows/.github/workflows/qubes-dom0-packagev2.yml@sq
+    with:
+      qubes-component: 'vmm-xen'
+    secrets: inherit
