@@ -11,3 +11,4 @@ jobs:
     uses: zarhus/qubes-builder-workflows/.github/workflows/qubes-dom0-packagev2.yml@sq
     with:
       qubes-component: 'vmm-xen'
+    secrets: inherit
